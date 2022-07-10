@@ -32,7 +32,7 @@ local function get_formspec(notice_name)
 		disp_text = disp_text .. " " .. x
 	end
 	disp_text = disp_text .. "\nAccess them with /notice <name>!"
-	return FORMSPEC_BASE:format(disp_text)
+	return FORMSPEC_BASE:format(minetest.formspec_escape(disp_text))
 end
 
 minetest.register_privilege("news_bypass",{
